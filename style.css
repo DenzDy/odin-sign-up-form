@@ -1,0 +1,149 @@
+:root{
+    --white: #FFFDFA;
+    --banner-element-size: 5vw;
+    --primary-font: 'Poppins', sans-serif;
+    --primary-text-size: 1.7rem;
+    --form-left-padding: 3vw;
+    --button-color: #596D48;
+    font-family: var(--primary-font);
+    font-weight: 600;
+
+}
+
+@font-face {
+    font-family: Norse;
+    src: url(./Norse-Bold.otf)
+}
+
+.grid-div{
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    min-height: 100vh;
+    min-width: 100vw;
+}
+
+#image-container{
+    grid-column: 1;
+    background-image: url("./images/halie-west-25xggax4bSA-unsplash.jpg");
+    background-size: cover;
+}
+
+#logo-section{
+    position: relative;
+    top: 19vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.25vw 0;
+}
+
+#banner-img{
+    width: var(--banner-element-size);
+    height: auto;
+}
+
+#banner-text{
+    font-size: var(--banner-element-size);
+    color: white;
+    font-family: "Norse", sans-serif;
+    font-weight: 400;
+}
+
+.form-container{
+    background-color: var(--white);
+    display: flex;
+    flex-direction: column;
+    margin-top: 10vh;
+    gap: 10vh;
+}
+
+.register{
+    display: grid;
+    background: white;
+    grid-template-columns: 
+        min-content min-content;
+    grid-template-rows: 
+        min-content min-content min-content;
+    grid-column-gap: 8vw;
+    box-shadow: 0 5px 10px rgba(100, 100, 100, 0.28);
+    padding: 2.5vh 0;
+    padding-left: var(--form-left-padding);
+    grid-row-gap: 3.25vh;
+}
+#form-banner-text{
+    font-size: var(--primary-text-size);
+    display: flex;
+    flex-direction: column;
+    gap: 2.5vh;
+    line-height: 3.5vh;
+    padding-left: var(--form-left-padding);
+    margin-right: 15vw;
+}
+#form-heading{
+    grid-column: 1 / span 2;
+    font-size: var(--primary-text-size);
+    font-family: inherit;
+    margin-bottom: 0vh;
+}
+.input{
+    display: flex;
+    flex-direction: column;
+    width: 15vw;
+    gap: 0.25rem;
+}
+.input > label{
+    text-transform: uppercase;
+    font-family: inherit;
+    font-weight: 700;
+    color: rgb(80, 80, 80);
+    letter-spacing: 0.15rem;
+    font-size: 0.85rem;
+}
+
+.input > input{
+    height: 1.75rem;
+    border: 0.25px solid #E5E7EB;
+    border-radius: 3px;
+}
+
+.input > input:focus{
+    border: 0.25px solid rgb(0, 102, 255);
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 5vh;
+}
+
+.buttons{
+    padding-left: var(--form-left-padding);
+}
+#register-button{
+    background-color: var(--button-color);
+    text-decoration: none;
+    border: 0px;
+    color: white;
+    padding: 1rem 4rem;
+    font-size: 1.4rem;
+    font-weight: 700;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(100, 100, 100, 0.28);
+    margin-bottom: 5vh;
+}
+
+.log-in-text{
+    display: flex;
+    gap: 0.25rem;
+}
+
+.log-in-text > a{
+    text-decoration: none;
+    color: var(--button-color);
+    font-weight: 900;
+}
+
+.error > input{
+    border: 1px solid red;
+}
